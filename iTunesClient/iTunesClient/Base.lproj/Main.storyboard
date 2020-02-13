@@ -202,7 +202,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" id="8vX-v4-lGN" customClass="SongCell" customModule="iTunesClient" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="43.5" id="8vX-v4-lGN" customClass="SongCell" customModule="iTunesClient" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="128" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8vX-v4-lGN" id="eOv-ge-ETV">
@@ -216,7 +216,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:24" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noG-Cp-EaZ">
-                                            <rect key="frame" x="376" y="13.5" width="30" height="17"/>
+                                            <rect key="frame" x="376" y="11.5" width="30" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -225,7 +225,11 @@
                                     <constraints>
                                         <constraint firstItem="noG-Cp-EaZ" firstAttribute="centerY" secondItem="eOv-ge-ETV" secondAttribute="centerY" id="H42-pQ-RIM"/>
                                         <constraint firstAttribute="trailing" secondItem="noG-Cp-EaZ" secondAttribute="trailing" constant="8" id="S2h-ZO-TuT"/>
+                                        <constraint firstItem="OVb-nQ-GtP" firstAttribute="top" secondItem="eOv-ge-ETV" secondAttribute="top" constant="11.5" id="SXh-mz-Rlp"/>
                                         <constraint firstItem="OVb-nQ-GtP" firstAttribute="centerY" secondItem="eOv-ge-ETV" secondAttribute="centerY" id="Whh-to-lLX"/>
+                                        <constraint firstItem="noG-Cp-EaZ" firstAttribute="top" secondItem="eOv-ge-ETV" secondAttribute="top" constant="11.5" id="Zvh-WV-azu"/>
+                                        <constraint firstAttribute="bottom" secondItem="noG-Cp-EaZ" secondAttribute="bottom" constant="11.5" id="jM5-14-u2y"/>
+                                        <constraint firstAttribute="bottom" secondItem="OVb-nQ-GtP" secondAttribute="bottom" constant="11.5" id="jZ2-eo-FTO"/>
                                         <constraint firstItem="OVb-nQ-GtP" firstAttribute="leading" secondItem="eOv-ge-ETV" secondAttribute="leading" constant="8" id="mXq-jx-5Dg"/>
                                     </constraints>
                                 </tableViewCellContentView>

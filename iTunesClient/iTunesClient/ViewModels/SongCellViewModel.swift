@@ -19,9 +19,15 @@ extension SongCellViewModel {
         
         // Track time in milliseconds
         let timeInSeconds = song.trackTime / 1000
-        let minutes = timeInSeconds / 60
+        let minutes = timeInSeconds / 60 % 60
         let seconds = timeInSeconds % 60
+        var secondsString: String
+        if seconds < 10 {
+            secondsString = "0\(seconds)"
+        } else {
+            secondsString = "\(seconds)"
+        }
 
-        self.runtime = "\(minutes):\(seconds)"
+        self.runtime = "\(minutes):\(secondsString)"
     }
 }

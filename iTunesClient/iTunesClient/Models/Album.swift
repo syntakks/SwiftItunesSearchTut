@@ -24,12 +24,12 @@ class Album {
     let isExplicit: Bool
     let numberOfTracks: Int
     let releaseDate: Date
-    let primaryGenre: Genre
+    let primaryGenre: String
     var songs = [Song]()
     var artwork: UIImage?
     var artworkState = AlbumArtworkState.placeholder
     
-    init(id: Int, artistName: String, name: String, censoredName: String, artworkUrl: String, isExplicit: Bool, numberOfTracks: Int, releaseDate: Date, primaryGenre: Genre) {
+    init(id: Int, artistName: String, name: String, censoredName: String, artworkUrl: String, isExplicit: Bool, numberOfTracks: Int, releaseDate: Date, primaryGenre: String) {
         self.id = id
         self.artistName = artistName
         self.name = name
@@ -70,11 +70,10 @@ extension Album {
             let numberOfTracksValue = json[Key.trackCount] as? Int,
             let releaseDateString = json[Key.releaseDate] as? String,
             let releaseDateValue = formatter.date(from: releaseDateString),
-            let primaryGenreString = json[Key.primaryGenre] as? String,
-            let primaryGenreValue = Genre(name: primaryGenreString) else { return nil }
+            let primaryGenreString = json[Key.primaryGenre] as? String else { return nil }
         
         let isExplicit = isExplicitValue == "notExplicit" ? false : true
         
-        self.init(id: idValue, artistName: artistNameValue, name: nameValue, censoredName: censoredNameValue, artworkUrl: artworkUrlString, isExplicit: isExplicit, numberOfTracks: numberOfTracksValue, releaseDate: releaseDateValue, primaryGenre: primaryGenreValue)
+        self.init(id: idValue, artistName: artistNameValue, name: nameValue, censoredName: censoredNameValue, artworkUrl: artworkUrlString, isExplicit: isExplicit, numberOfTracks: numberOfTracksValue, releaseDate: releaseDateValue, primaryGenre: primaryGenreString)
     }
 }

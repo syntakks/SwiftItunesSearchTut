@@ -20,7 +20,7 @@ extension AlbumDetailViewModel {
     init(album: Album) {
         self.artwork = album.artwork ?? #imageLiteral(resourceName: "placeholder")
         self.title = album.name
-        self.genre = album.primaryGenre.name
+        self.genre = album.primaryGenre
         
         let formatter = DateFormatter()
         formatter.locale = Locale.current

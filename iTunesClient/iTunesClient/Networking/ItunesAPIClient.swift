@@ -19,9 +19,6 @@ class ItunesAPIClient {
     func searchForArtists(withTerm term: String, completion: @escaping ArtistCompletion) {
         let endpoint = Itunes.search(term: term, media: .music(entity: .musicArtist, attribute: .artistTerm))
         performRequest(with: endpoint) { results, error in
-            print("------------------------------------------------------------------------------")
-            print("------------------------------------------------------------------------------")
-            print(results)
             guard let results = results else {
                 completion([], error)
                 return
