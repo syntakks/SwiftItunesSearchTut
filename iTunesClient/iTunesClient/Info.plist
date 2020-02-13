@@ -60,5 +60,18 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>mzstatic.com</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureLoads</key>
+				<true/>
+				<key>NSIncludesSubDomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>
